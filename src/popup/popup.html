@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>MannaPay</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <img src="../../icons/icon-32.png" width="24" height="24" alt="">
+    <div>
+      <div class="brand">MannaPay</div>
+      <div class="tagline">PayPal checkout. Simplified.</div>
+    </div>
+  </header>
+
+  <section id="site" class="card" aria-live="polite">
+    <div class="muted" id="site-host">This page</div>
+    <div id="site-status" class="status">Checking…</div>
+    <div id="site-order" hidden>
+      <div class="merchant" id="order-merchant"></div>
+      <div class="total" id="order-total"></div>
+      <div class="warn" id="order-warn" hidden></div>
+    </div>
+    <button id="assist" class="primary" type="button" hidden>Pay with PayPal</button>
+    <label class="toggle">
+      <input type="checkbox" id="site-enabled">
+      <span>Enable MannaPay on this site</span>
+    </label>
+  </section>
+
+  <section class="card">
+    <h2>Settings</h2>
+    <label class="toggle">
+      <input type="checkbox" id="show-panel">
+      <span>Show the assistant on checkouts that accept PayPal</span>
+    </label>
+    <label class="toggle">
+      <input type="checkbox" id="auto-select">
+      <span>Automatically select PayPal as the payment method <small>(never places an order)</small></span>
+    </label>
+  </section>
+
+  <section class="card">
+    <div class="row">
+      <h2>Recent payments</h2>
+      <button id="clear-history" class="link" type="button" hidden>Clear</button>
+    </div>
+    <ul id="history"></ul>
+    <p id="history-empty" class="muted">Payments you make with MannaPay’s help show up here.</p>
+  </section>
+
+  <footer class="muted">MannaPay never sees your PayPal password. You always approve payments on PayPal.</footer>
+  <script src="../lib/money.js"></script>
+  <script src="../lib/settings.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

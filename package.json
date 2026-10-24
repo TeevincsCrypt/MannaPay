@@ -1,0 +1,16 @@
+{
+  "name": "mannapay",
+  "version": "0.1.0",
+  "private": true,
+  "description": "PayPal checkout. Simplified. A browser extension that detects checkouts and helps users pay with PayPal.",
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "test:e2e": "node test/e2e/run.js",
+    "icons": "python3 scripts/make_icons.py",
+    "package": "node scripts/package.js"
+  },
+  "devDependencies": {
+    "jsdom": "^26.1.0"
+  },
+  "license": "UNLICENSED"
+}

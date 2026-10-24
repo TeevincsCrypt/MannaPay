@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <title>Checkout – Acme Outfitters</title>
+  <meta property="og:site_name" content="Acme Outfitters">
+</head>
+<body>
+  <header><a href="/">Acme Outfitters</a></header>
+  <main>
+    <h1>Checkout</h1>
+    <form id="checkout" action="/thank-you.html" method="get">
+      <fieldset>
+        <legend>Shipping address</legend>
+        <input name="name" autocomplete="shipping name" placeholder="Full name">
+        <input name="address1" autocomplete="shipping address-line1" placeholder="Address">
+        <input name="zip" autocomplete="shipping postal-code" placeholder="ZIP">
+      </fieldset>
+      <fieldset>
+        <legend>Payment method</legend>
+        <label><input type="radio" name="payment" value="card" checked> Credit or debit card</label>
+        <label><input type="radio" name="payment" value="paypal_express"> <img src="/img/paypal-logo.svg" alt="PayPal"></label>
+        <a href="https://www.paypal.com/webapps/mpp/paypal-popup">What is PayPal?</a>
+      </fieldset>
+      <section class="order-summary">
+        <h2>Order summary</h2>
+        <table>
+          <tr><td>Trail Runner Jacket</td><td>$129.00</td></tr>
+          <tr><td>Subtotal</td><td>$129.00</td></tr>
+          <tr><td>Shipping</td><td>$8.50</td></tr>
+          <tr><td>Tax</td><td>$11.29</td></tr>
+          <tr class="grand"><th>Order total</th><td><strong>$148.79</strong></td></tr>
+        </table>
+      </section>
+      <button type="submit" id="place-order">Place order</button>
+    </form>
+  </main>
+  <footer>We accept Visa, Mastercard and PayPal.</footer>
+</body>
+</html>
